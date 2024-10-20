@@ -1,0 +1,15 @@
+model Activity {
+  id                   String                     @id @default(uuid())
+  name                 String
+  createdAt            DateTime                   @default(now())
+  updatedAt            DateTime                   @default(now())
+  companyId            String
+  type                 Type                       @default(DEFAULT)
+  memberWorkActivities MemberWorkResultActivity[]
+  company              Company?                   @relation(fields: [companyId], references: [id])
+}
+
+enum Type {
+  DEFAULT
+  COMPANY
+}

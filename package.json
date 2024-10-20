@@ -1,0 +1,14 @@
+{
+    "name": "my-workspace",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "dev:fe": "cd ./packages/administrasi && vite",
+        "dev:be": "cd ./packages/administrasi-be && nest start --watch",
+        "build:fe": "cd ./packages/administrasi && vite build",
+        "build:be": "cd ./packages/administrasi-be && nest build"
+    },
+    "devDependencies": {}
+}
